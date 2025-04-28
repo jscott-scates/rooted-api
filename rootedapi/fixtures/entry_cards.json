@@ -3,7 +3,7 @@
         "model": "rootedapi.entrycard",
         "pk": 1,
         "fields": {
-            "journal_entry": 1,
+            "journalEntry": 1,
             "card": 1,
             "spread_position": 1
         }
@@ -12,7 +12,7 @@
         "model": "rootedapi.entrycard",
         "pk": 2,
         "fields": {
-            "journal_entry": 2,
+            "journalEntry": 2,
             "card": 2,
             "spread_position": 2
         }
@@ -21,7 +21,7 @@
         "model": "rootedapi.entrycard",
         "pk": 3,
         "fields": {
-            "journal_entry": 2,
+            "journalEntry": 2,
             "card": 3,
             "spread_position": 3
         }
@@ -30,7 +30,7 @@
         "model": "rootedapi.entrycard",
         "pk": 4,
         "fields": {
-            "journal_entry": 2,
+            "journalEntry": 2,
             "card": 4,
             "spread_position": 4
         }
@@ -39,7 +39,7 @@
         "model": "rootedapi.entrycard",
         "pk": 5,
         "fields": {
-            "journal_entry": 3,
+            "journalEntry": 3,
             "card": 2,
             "spread_position": 1
         }
@@ -48,7 +48,7 @@
         "model": "rootedapi.entrycard",
         "pk": 6,
         "fields": {
-            "journal_entry": 4,
+            "journalEntry": 4,
             "card": 1,
             "spread_position": 2
         }
@@ -57,7 +57,7 @@
         "model": "rootedapi.entrycard",
         "pk": 7,
         "fields": {
-            "journal_entry": 4,
+            "journalEntry": 4,
             "card": 4,
             "spread_position": 3
         }
@@ -66,7 +66,7 @@
         "model": "rootedapi.entrycard",
         "pk": 8,
         "fields": {
-            "journal_entry": 4,
+            "journalEntry": 4,
             "card": 3,
             "spread_position": 4
         }
@@ -75,7 +75,7 @@
         "model": "rootedapi.entrycard",
         "pk": 9,
         "fields": {
-            "journal_entry": 5,
+            "journalEntry": 5,
             "card": 3,
             "spread_position": 1
         }
@@ -84,7 +84,7 @@
         "model": "rootedapi.entrycard",
         "pk": 10,
         "fields": {
-            "journal_entry": 6,
+            "journalEntry": 6,
             "card": 4,
             "spread_position": 2
         }
@@ -93,7 +93,7 @@
         "model": "rootedapi.entrycard",
         "pk": 11,
         "fields": {
-            "journal_entry": 6,
+            "journalEntry": 6,
             "card": 2,
             "spread_position": 3
         }
@@ -102,7 +102,7 @@
         "model": "rootedapi.entrycard",
         "pk": 12,
         "fields": {
-            "journal_entry": 6,
+            "journalEntry": 6,
             "card": 1,
             "spread_position": 4
         }

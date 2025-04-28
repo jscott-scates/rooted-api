@@ -3,7 +3,6 @@
         "model": "rootedapi.spreadposition",
         "pk": 1,
         "fields": {
-            "sage": 1,
             "spread": 1,
             "position": 1,
             "label": "Daily Seed",

@@ -44,10 +44,10 @@ class JournalEntry(models.Model):
         null=True,
         blank=True
     )
-    lunarPhase = models.CharField(
+    lunar_phase = models.CharField(
         max_length=25,
         choices=LunarPhase.choices,
         null=True,
         blank=True
     )
-    spread = models.ForeignKey("Spread", on_delete=models.SET_NULL, related_name="journal_spread")
+    spread = models.ForeignKey("Spread", on_delete=models.CASCADE, related_name="journal_spread")

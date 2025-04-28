@@ -10,4 +10,3 @@ from .journalentry import Mood, LunarPhase, JournalEntry
 from .spread import Spread
 from .spreadposition import SpreadPosition
 from .entrycard import EntryCard
-

@@ -7,16 +7,16 @@ python3 manage.py makemigrations rootedapi
 python3 manage.py migrate rootedapi
 python3 manage.py loaddata users
 python3 manage.py loaddata tokens
-python3 manage.py loaddata deckTypes
+python3 manage.py loaddata spreads
+python3 manage.py loaddata spread_positions
+python3 manage.py loaddata deck_types
 python3 manage.py loaddata decks
 python3 manage.py loaddata elements
-python3 manage.py loaddata cardTypes
+python3 manage.py loaddata card_types
 python3 manage.py loaddata keywords
 python3 manage.py loaddata cards
-python3 manage.py loaddata cardKeywords
+python3 manage.py loaddata card_keywords
 python3 manage.py loaddata sages
-python3 manage.py loaddata spreads
-python3 manage.py loaddata spreadPositions
-python3 manage.py loaddata journalEntries
-python3 manage.py loaddata entryCards 
+python3 manage.py loaddata journal_entries
+python3 manage.py loaddata entry_cards 
 

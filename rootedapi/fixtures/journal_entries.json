@@ -4,7 +4,8 @@
         "pk": 1,
         "fields": {
             "title": "Daily Reflection 1",
-            "content": "Today's pull offers grounding energy for the day.",
+            "entry_text": "Today's pull offers grounding energy for the day.",
+            "created_on":"2025-04-25T09:00:00Z",
             "mood": "calm",
             "lunar_phase": "New Moon",
             "spread": 1,
@@ -17,7 +18,8 @@
         "pk": 2,
         "fields": {
             "title": "Rooted Journey 1",
-            "content": "Exploring where my foundation is strongest.",
+            "entry_text": "Exploring where my foundation is strongest.",
+            "created_on":"2025-04-26T11:30:00Z",
             "mood": "reflective",
             "lunar_phase": "Full Moon",
             "spread": 2,
@@ -30,7 +32,8 @@
         "pk": 3,
         "fields": {
             "title": "Daily Reflection 2",
-            "content": "Today's card brings clarity to my next steps.",
+            "entry_text": "Today's card brings clarity to my next steps.",
+            "created_on":"2025-04-27T08:15:00Z",
             "mood": "hopeful",
             "lunar_phase": "Waxing Moon",
             "spread": 1,
@@ -43,7 +46,8 @@
         "pk": 4,
         "fields": {
             "title": "Rooted Journey 2",
-            "content": "Checking in on what needs more nourishment.",
+            "entry_text": "Checking in on what needs more nourishment.",
+            "created_on":"2025-04-25T09:00:00Z",
             "mood": "curious",
             "lunar_phase": "Waning Moon",
             "spread": 2,
@@ -56,7 +60,8 @@
         "pk": 5,
         "fields": {
             "title": "Daily Reflection 3",
-            "content": "Feeling called to patience and steady growth.",
+            "entry_text": "Feeling called to patience and steady growth.",
+            "created_on":"2025-04-26T11:30:00Z",
             "mood": "grounded",
             "lunar_phase": "Full Moon",
             "spread": 1,
@@ -69,7 +74,8 @@
         "pk": 6,
         "fields": {
             "title": "Rooted Journey 3",
-            "content": "Recognizing the fruits of my efforts blooming now.",
+            "entry_text": "Recognizing the fruits of my efforts blooming now.",
+            "created_on":"2025-04-27T08:15:00Z",
             "mood": "grateful",
             "lunar_phase": "Waning Moon",
             "spread": 2,

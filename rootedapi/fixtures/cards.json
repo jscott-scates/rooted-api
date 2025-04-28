@@ -9,7 +9,7 @@
             "image_path": null,
             "element": 1,
             "deck": 1,
-            "cardType": 1
+            "card_type": 1
         }
     },
     {
@@ -22,7 +22,7 @@
             "image_path": null,
             "element": 2,
             "deck": 1,
-            "cardType": 1
+            "card_type": 1
         }
     },
     {
@@ -35,7 +35,7 @@
             "image_path": null,
             "element": 3,
             "deck": 1,
-            "cardType": 1
+            "card_type": 1
         }
     },
     {
@@ -48,7 +48,7 @@
             "image_path": null,
             "element": 4,
             "deck": 1,
-            "cardType": 1
+            "card_type": 1
         }
     },
     {
@@ -61,7 +61,7 @@
             "image_path": null,
             "element": 5,
             "deck": 1,
-            "cardType": 1
+            "card_type": 1
         }
     }
 ]

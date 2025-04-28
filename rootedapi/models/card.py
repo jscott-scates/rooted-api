@@ -9,7 +9,7 @@ class Card(models.Model):
         upload_to="cards",
         null=True
     )
-    element = models.ForeignKey("Element", on_delete=models.SET_NULL, related_name="card_element")
+    element = models.ForeignKey("Element", on_delete=models.PROTECT, related_name="card_element")
     deck = models.ForeignKey(Deck, on_delete=models.CASCADE)
-    cardType = models.ForeignKey("CardType", on_delete=models.PROTECT)
+    card_type = models.ForeignKey("CardType", on_delete=models.PROTECT)
     keywords = models.ManyToManyField("Keyword", through="CardKeyword", related_name="keyword_cards")
