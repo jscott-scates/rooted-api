@@ -1,0 +1,43 @@
+[
+    {
+        "model": "rootedapi.spreadposition",
+        "pk": 1,
+        "fields": {
+            "sage": 1,
+            "spread": 1,
+            "position": 1,
+            "label": "Daily Seed",
+            "prompt": "What intention will guide me today?"
+        }
+    },
+    {
+        "model": "rootedapi.spreadposition",
+        "pk": 2,
+        "fields": {
+            "spread": 2,
+            "position": 1,
+            "label": "Root",
+            "prompt": "What is grounding me at this moment?"
+        }
+    },
+    {
+        "model": "rootedapi.spreadposition",
+        "pk": 3,
+        "fields": {
+            "spread": 2,
+            "position": 2,
+            "label": "Grow",
+            "prompt": "Where am I being asked to nurture growth?"
+        }
+    },
+    {
+        "model": "rootedapi.spreadposition",
+        "pk": 4,
+        "fields": {
+            "spread": 2,
+            "position": 3,
+            "label": "Bloom",
+            "prompt": "What is ready to blossom and be seen?"
+        }
+    }
+]

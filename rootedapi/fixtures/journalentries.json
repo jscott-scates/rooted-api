@@ -1,0 +1,80 @@
+[
+    {
+        "model": "rootedapi.journalentry",
+        "pk": 1,
+        "fields": {
+            "title": "Daily Reflection 1",
+            "content": "Today's pull offers grounding energy for the day.",
+            "mood": "calm",
+            "lunar_phase": "New Moon",
+            "spread": 1,
+            "sage": 1,
+            "initial_seed": "Focus on stability and presence."
+        }
+    },
+    {
+        "model": "rootedapi.journalentry",
+        "pk": 2,
+        "fields": {
+            "title": "Rooted Journey 1",
+            "content": "Exploring where my foundation is strongest.",
+            "mood": "reflective",
+            "lunar_phase": "Full Moon",
+            "spread": 2,
+            "sage": 1,
+            "initial_seed": null
+        }
+    },
+    {
+        "model": "rootedapi.journalentry",
+        "pk": 3,
+        "fields": {
+            "title": "Daily Reflection 2",
+            "content": "Today's card brings clarity to my next steps.",
+            "mood": "hopeful",
+            "lunar_phase": "Waxing Moon",
+            "spread": 1,
+            "sage": 2,
+            "initial_seed": "Open to the light guiding new paths."
+        }
+    },
+    {
+        "model": "rootedapi.journalentry",
+        "pk": 4,
+        "fields": {
+            "title": "Rooted Journey 2",
+            "content": "Checking in on what needs more nourishment.",
+            "mood": "curious",
+            "lunar_phase": "Waning Moon",
+            "spread": 2,
+            "sage": 2,
+            "initial_seed": null
+        }
+    },
+    {
+        "model": "rootedapi.journalentry",
+        "pk": 5,
+        "fields": {
+            "title": "Daily Reflection 3",
+            "content": "Feeling called to patience and steady growth.",
+            "mood": "grounded",
+            "lunar_phase": "Full Moon",
+            "spread": 1,
+            "sage": 3,
+            "initial_seed": "Grow steadily, trusting deep roots."
+        }
+    },
+    {
+        "model": "rootedapi.journalentry",
+        "pk": 6,
+        "fields": {
+            "title": "Rooted Journey 3",
+            "content": "Recognizing the fruits of my efforts blooming now.",
+            "mood": "grateful",
+            "lunar_phase": "Waning Moon",
+            "spread": 2,
+            "sage": 4,
+            "initial_seed": "Celebrate blooms with gratitude and joy."
+        }
+    }
+]

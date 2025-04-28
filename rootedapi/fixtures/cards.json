@@ -1,0 +1,67 @@
+[
+    {
+        "model": "rootedapi.card",
+        "pk": 1,
+        "fields": {
+            "name": "Clarity",
+            "meaning": "Birch is the tree of renewal and new beginnings. It clears the path forward and invites fresh vision after darkness.",
+            "orientation_enabled": false,
+            "image_path": null,
+            "element": 1,
+            "deck": 1,
+            "cardType": 1
+        }
+    },
+    {
+        "model": "rootedapi.card",
+        "pk": 2,
+        "fields": {
+            "name": "Endurance",
+            "meaning": "Oak is the tree of strength and perseverance. Rooted deep, it withstands storms and grows stronger with time.",
+            "orientation_enabled": false,
+            "image_path": null,
+            "element": 2,
+            "deck": 1,
+            "cardType": 1
+        }
+    },
+    {
+        "model": "rootedapi.card",
+        "pk": 3,
+        "fields": {
+            "name": "Vitality",
+            "meaning": "Redwood is the tree of resilience and life force. It rises high from fire and hardship, carrying the spirit of renewal.",
+            "orientation_enabled": false,
+            "image_path": null,
+            "element": 3,
+            "deck": 1,
+            "cardType": 1
+        }
+    },
+    {
+        "model": "rootedapi.card",
+        "pk": 4,
+        "fields": {
+            "name": "Illumination",
+            "meaning": "Yew is the tree of spirit and eternal transformation. It bridges the seen and unseen, offering quiet, enduring wisdom.",
+            "orientation_enabled": false,
+            "image_path": null,
+            "element": 4,
+            "deck": 1,
+            "cardType": 1
+        }
+    },
+    {
+        "model": "rootedapi.card",
+        "pk": 5,
+        "fields": {
+            "name": "Reflection",
+            "meaning": "Willow is the tree of emotional flow and healing. It bends but does not break, guiding you to embrace your inner tides.",
+            "orientation_enabled": false,
+            "image_path": null,
+            "element": 5,
+            "deck": 1,
+            "cardType": 1
+        }
+    }
+]

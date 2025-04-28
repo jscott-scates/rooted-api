@@ -1,0 +1,114 @@
+[
+    {
+        "model": "rootedapi.cardkeyword",
+        "pk": 1,
+        "fields": {
+            "card": 1,
+            "keyword": 10
+        }
+    },
+    {
+        "model": "rootedapi.cardkeyword",
+        "pk": 2,
+        "fields": {
+            "card": 1,
+            "keyword": 8
+        }
+    },
+    {
+        "model": "rootedapi.cardkeyword",
+        "pk": 3,
+        "fields": {
+            "card": 1,
+            "keyword": 7
+        }
+    },
+    {
+        "model": "rootedapi.cardkeyword",
+        "pk": 4,
+        "fields": {
+            "card": 2,
+            "keyword": 1
+        }
+    },
+    {
+        "model": "rootedapi.cardkeyword",
+        "pk": 5,
+        "fields": {
+            "card": 2,
+            "keyword": 2
+        }
+    },
+    {
+        "model": "rootedapi.cardkeyword",
+        "pk": 6,
+        "fields": {
+            "card": 2,
+            "keyword": 3
+        }
+    },
+    {
+        "model": "rootedapi.cardkeyword",
+        "pk": 7,
+        "fields": {
+            "card": 3,
+            "keyword": 3
+        }
+    },
+    {
+        "model": "rootedapi.cardkeyword",
+        "pk": 8,
+        "fields": {
+            "card": 3,
+            "keyword": 6
+        }
+    },
+    {
+        "model": "rootedapi.cardkeyword",
+        "pk": 9,
+        "fields": {
+            "card": 3,
+            "keyword": 1
+        }
+    },
+    {
+        "model": "rootedapi.cardkeyword",
+        "pk": 10,
+        "fields": {
+            "card": 4,
+            "keyword": 4
+        }
+    },
+    {
+        "model": "rootedapi.cardkeyword",
+        "pk": 11,
+        "fields": {
+            "card": 4,
+            "keyword": 9
+        }
+    },
+    {
+        "model": "rootedapi.cardkeyword",
+        "pk": 12,
+        "fields": {
+            "card": 5,
+            "keyword": 5
+        }
+    },
+    {
+        "model": "rootedapi.cardkeyword",
+        "pk": 13,
+        "fields": {
+            "card": 5,
+            "keyword": 4
+        }
+    },
+    {
+        "model": "rootedapi.cardkeyword",
+        "pk": 14,
+        "fields": {
+            "card": 5,
+            "keyword": 7
+        }
+    }
+]

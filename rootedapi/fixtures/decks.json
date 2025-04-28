@@ -1,0 +1,12 @@
+[
+    {
+        "model": "rootedapi.deck",
+        "pk":1,
+        "fields":{
+            "name":"The Rooted Deck",
+            "description": "The Rooted Deck is a nature-woven oracle, carrying the quiet wisdom of trees — guardians of strength, resilience, and deep connection. Each card offers a tree’s story as a gentle mirror, inviting reflection, healing, and personal growth. In the patient rhythm of roots and branches, The Rooted Deck reminds us that resilience is a quiet beauty and growth is a lifelong journey.",
+            "theme":"Grounded Wisdom",
+            "deckType": 1
+        }
+    }
+]

@@ -1,0 +1,29 @@
+[
+    {
+        "model": "rootedapi.cardtype",
+        "pk": 1,
+        "fields": {
+            "name": "essence",
+            "label":"Essence",
+            "description": "Cards representing core themes and universal energies, typically for oracle-style readings."
+        }
+    },
+    {
+        "model": "rootedapi.cardtype",
+        "pk": 2,
+        "fields": {
+            "name": "major_arcana",
+            "label":"Major Arcana",
+            "description": "The 22 major archetypal cards in tarot, representing profound life lessons and milestones."
+        }
+    },
+    {
+        "model": "rootedapi.cardtype",
+        "pk": 3,
+        "fields": {
+            "name": "minor_arcana",
+            "label": "Minor Arcana",
+            "description": "The 56 minor tarot cards that depict everyday experiences, emotions, and challenges."
+        }
+    }
+]

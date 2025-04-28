@@ -1,0 +1,20 @@
+[
+    {
+        "model":"rootedapi.decktype",
+        "pk": 1,
+        "fields": {
+            "name": "oracle",
+            "label": "Oracle",
+            "description":"A tool for reflection and insight, offering intuitive guidance through symbols, nature, or archetypes."
+        }
+    },
+    {
+        "model":"rootedapi.decktype",
+        "pk": 2,
+        "fields": {
+            "name": "tarot",
+            "label": "Tarot",
+            "description":"A structured 78-card system used for divination and self-exploration. Divided into the Major and Minor Arcana, each card carries traditional meanings that guide reflection, storytelling, and personal insight."
+        }
+    }
+]
