@@ -6,6 +6,7 @@ from rootedapi.models import *
 from rootedapi.views import *
 
 router = routers.DefaultRouter(trailing_slash=False)
+router.register(r"users", Users,"user")
 
 urlpatterns = [
     path('', include(router.urls)),
