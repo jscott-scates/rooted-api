@@ -10,6 +10,9 @@ from rootedapi.views import *
 router = routers.DefaultRouter(trailing_slash=False)
 router.register(r"users", Users,"user")
 router.register(r"sages",Sages, "sage")
+router.register(r"spreads", Spreads,"spread")
+router.register(r"decks", Decks, "deck")
+router.register(r"decktypes", DeckTypes, "decktype")
 
 urlpatterns = [
     path("", include(router.urls)),
