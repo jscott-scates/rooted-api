@@ -16,3 +16,14 @@ class DeckTypeSerializer(serializers.ModelSerializer):
             'label',
             'description',
         )
+
+#Only created list function at this time, should not need create or destroy as users don't have the option but may need retrieve.
+class DeckTypes(ViewSet):
+
+    permission_classes = (IsAuthenticatedOrReadOnly,)
+
+    def list(self, request):
+        decktypes = DeckType.objects.all()
+        serializer = DeckTypeSerializer(decktypes, many=True, context={"request": request})
+
+        return Response(serializer.data)
