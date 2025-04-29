@@ -13,7 +13,7 @@ router.register(r"sages",Sages, "sage")
 router.register(r"spreads", Spreads,"spread")
 router.register(r"decks", Decks, "deck")
 router.register(r"decktypes", DeckTypes, "decktype")
-router.register(r"elements", Elements, "element")
+router.register(r"cards", Cards, "card")
 
 urlpatterns = [
     path("", include(router.urls)),
