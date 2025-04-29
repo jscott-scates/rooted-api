@@ -40,6 +40,7 @@ class SpreadDetailsSerializer(serializers.ModelSerializer):
     
     def get_spread_positions(self, obj):
         positions = SpreadPosition.objects.filter(spread=obj.pk)
+        
         return SpreadPositionSerializer(positions, many=True, context=self.context).data
 
 
@@ -57,7 +58,9 @@ class Spreads(ViewSet):
         try:
             spread = Spread.objects.get(pk=pk)
             serializer = SpreadDetailsSerializer(spread, many=False, context={"request":request})
+            
             return Response(serializer.data)
         except Spread.DoesNotExist as ex:
+            
             return Response({"message": ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
         
