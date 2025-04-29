@@ -3,8 +3,8 @@ from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers
 from rest_framework import status
-from rootedapi.models import Sage
-from rootedapi.models import Deck
+from rootedapi.models import Sage, Deck
+
 
 class SageSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
