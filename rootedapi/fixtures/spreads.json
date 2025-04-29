@@ -1,0 +1,20 @@
+[
+    {
+        "model": "rootedapi.spread",
+        "pk": 1,
+        "fields": {
+            "name": "Daily Seed",
+            "description": "A single card to plant intention and reflection for today.",
+            "num_positions": 1
+        }
+    },
+    {
+        "model": "rootedapi.spread",
+        "pk": 2,
+        "fields": {
+            "name": "Root | Grow | Bloom",
+            "description": "A 3-card spread to explore where you are rooted, how you are growing, and what is blossoming.",
+            "num_positions": 3
+        }
+    }
+]

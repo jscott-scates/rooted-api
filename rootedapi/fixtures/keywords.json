@@ -1,0 +1,82 @@
+[
+    {
+        "model": "rootedapi.keyword",
+        "pk": 1,
+        "fields": {
+            "name": "strength",
+            "label": "Strength"
+        }
+    },
+    {
+        "model": "rootedapi.keyword",
+        "pk": 2,
+        "fields": {
+            "name": "resilience",
+            "label": "Resilience"
+        }
+    },
+    {
+        "model": "rootedapi.keyword",
+        "pk": 3,
+        "fields": {
+            "name": "growth",
+            "label": "Growth"
+        }
+    },
+    {
+        "model": "rootedapi.keyword",
+        "pk": 4,
+        "fields": {
+            "name": "intuition",
+            "label": "Intuition"
+        }
+    },
+    {
+        "model": "rootedapi.keyword",
+        "pk": 5,
+        "fields": {
+            "name": "healing",
+            "label": "Healing"
+        }
+    },
+    {
+        "model": "rootedapi.keyword",
+        "pk": 6,
+        "fields": {
+            "name": "courage",
+            "label": "Courage"
+        }
+    },
+    {
+        "model": "rootedapi.keyword",
+        "pk": 7,
+        "fields": {
+            "name": "balance",
+            "label": "Balance"
+        }
+    },
+    {
+        "model": "rootedapi.keyword",
+        "pk": 8,
+        "fields": {
+            "name": "freedom",
+            "label": "Freedom"
+        }
+    },
+    {
+        "model": "rootedapi.keyword",
+        "pk": 9,
+        "fields": {
+            "name": "transformation",
+            "label": "Transformation"
+        }
+    },
+    {
+        "model": "rootedapi.keyword",
+        "pk": 10,
+        "fields": {
+            "name": "clarity",
+            "label": "Clarity"
+        }
+    }
+]

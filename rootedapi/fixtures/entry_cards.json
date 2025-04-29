@@ -1,0 +1,110 @@
+[
+    {
+        "model": "rootedapi.entrycard",
+        "pk": 1,
+        "fields": {
+            "journalEntry": 1,
+            "card": 1,
+            "spread_position": 1
+        }
+    },
+    {
+        "model": "rootedapi.entrycard",
+        "pk": 2,
+        "fields": {
+            "journalEntry": 2,
+            "card": 2,
+            "spread_position": 2
+        }
+    },
+    {
+        "model": "rootedapi.entrycard",
+        "pk": 3,
+        "fields": {
+            "journalEntry": 2,
+            "card": 3,
+            "spread_position": 3
+        }
+    },
+    {
+        "model": "rootedapi.entrycard",
+        "pk": 4,
+        "fields": {
+            "journalEntry": 2,
+            "card": 4,
+            "spread_position": 4
+        }
+    },
+    {
+        "model": "rootedapi.entrycard",
+        "pk": 5,
+        "fields": {
+            "journalEntry": 3,
+            "card": 2,
+            "spread_position": 1
+        }
+    },
+    {
+        "model": "rootedapi.entrycard",
+        "pk": 6,
+        "fields": {
+            "journalEntry": 4,
+            "card": 1,
+            "spread_position": 2
+        }
+    },
+    {
+        "model": "rootedapi.entrycard",
+        "pk": 7,
+        "fields": {
+            "journalEntry": 4,
+            "card": 4,
+            "spread_position": 3
+        }
+    },
+    {
+        "model": "rootedapi.entrycard",
+        "pk": 8,
+        "fields": {
+            "journalEntry": 4,
+            "card": 3,
+            "spread_position": 4
+        }
+    },
+    {
+        "model": "rootedapi.entrycard",
+        "pk": 9,
+        "fields": {
+            "journalEntry": 5,
+            "card": 3,
+            "spread_position": 1
+        }
+    },
+    {
+        "model": "rootedapi.entrycard",
+        "pk": 10,
+        "fields": {
+            "journalEntry": 6,
+            "card": 4,
+            "spread_position": 2
+        }
+    },
+    {
+        "model": "rootedapi.entrycard",
+        "pk": 11,
+        "fields": {
+            "journalEntry": 6,
+            "card": 2,
+            "spread_position": 3
+        }
+    },
+    {
+        "model": "rootedapi.entrycard",
+        "pk": 12,
+        "fields": {
+            "journalEntry": 6,
+            "card": 1,
+            "spread_position": 4
+        }
+    }
+]
