@@ -5,16 +5,14 @@ from rest_framework import serializers
 from rest_framework import status
 from rest_framework.decorators import action
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
-from rootedapi.models import SpreadPosition
+from rootedapi.models import DeckType
 
-class SpreadPositionSerializer(serializers.ModelSerializer):
+class DeckTypeSerializer(serializers.ModelSerializer):
     class Meta:
-        model = SpreadPosition
+        model = DeckType
         fields = (
-            "id",
-            "spread",
-            "position",
-            "label",
-            "prompt"
+            'id',
+            'name',
+            'label',
+            'description',
         )
-
