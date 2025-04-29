@@ -5,7 +5,7 @@ from rest_framework import serializers
 from rest_framework import status
 from rest_framework.decorators import action
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
-from rootedapi.models import Deck, DeckType
+from rootedapi.models import Deck
 from .decktypes import DeckTypeSerializer
 
 class DeckSerializer(serializers.HyperlinkedModelSerializer):
