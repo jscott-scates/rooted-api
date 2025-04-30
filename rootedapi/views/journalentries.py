@@ -1,4 +1,4 @@
-from django.http import HttpResponseServerError
+from django.http import HttpResponseServerError, HttpResponseForbidden
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers
@@ -108,3 +108,27 @@ class JournalEntries(ViewSet):
         except Exception as ex:
             return Response({"message":ex.args[0]},status=status.HTTP_500_INTERNAL_SERVER_ERROR)
         
+    def update(self, request, pk=None):
+
+        try: 
+            current_sage = Sage.objects.get(user = request.auth.user)
+            entry = JournalEntry.objects.get(pk=pk)
+
+            if entry.sage != current_sage:
+                return HttpResponseForbidden("You do not have permission to update this journal entry.")
+            
+            entry.initial_seed = request.data["initial_seed"]
+            entry.title = request.data["title"]
+            entry.entry_text = request.data["entry_text"]
+            entry.mood = request.data["mood"]
+            entry.lunar_phase = request.data["lunar_phase"]
+            entry.created_on = entry.created_on
+            entry.sage = entry.sage
+            entry.spread = entry.spread
+
+            entry.save()
+
+            return Response({},status=status.HTTP_204_NO_CONTENT)
+        except Exception as ex:
+
+            return Response({"message": ex.args[0]}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
