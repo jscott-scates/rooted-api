@@ -5,7 +5,7 @@ from rest_framework import serializers
 from rest_framework import status
 from rest_framework.decorators import action
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
-from rootedapi.models import JournalEntry, Sage, Spread, SpreadPosition, EntryCard
+from rootedapi.models import JournalEntry, Sage, SpreadPosition, EntryCard
 from .sages import SageSerializer
 from .spreads import SpreadDetailsSerializer
 
@@ -61,6 +61,11 @@ class JournalEntries(ViewSet):
         try:
             current_sage = Sage.objects.get(user=request.auth.user)
             entry = JournalEntry.objects.get(pk=pk,sage = current_sage)
+            entry_cards = EntryCard.objects.filter(journalEntry=pk)
+
+            for card in entry_cards:
+                card.delete()
+
             entry.delete()
 
             return Response({}, status = status.HTTP_204_NO_CONTENT)

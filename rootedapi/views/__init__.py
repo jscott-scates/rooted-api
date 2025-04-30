@@ -7,3 +7,4 @@ from .decks import Decks
 from .decktypes import DeckTypes
 from .cards import Cards
 from .journalentries import JournalEntries
+from .entrycards import EntryCards

@@ -15,6 +15,7 @@ router.register(r"decks", Decks, "deck")
 router.register(r"decktypes", DeckTypes, "decktype")
 router.register(r"cards", Cards, "card")
 router.register(r"journal-entries",JournalEntries, "journal-entry")
+router.register(r"entry-cards", EntryCards, "entry-card")
 
 urlpatterns = [
     path("", include(router.urls)),
