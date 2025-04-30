@@ -1,4 +1,3 @@
-
 from django.http import HttpResponseServerError
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
@@ -44,8 +43,8 @@ class KeywordSerializer(serializers.ModelSerializer):
             'label'
         )
 
-class CardSerializer(serializers.ModelSerializer):
-    #Need to add url, card_type, keywords
+class CardSerializer(serializers.HyperlinkedModelSerializer):
+    #Figure out how to add URL
     element = serializers.SerializerMethodField()
     deck = serializers.SerializerMethodField()
     card_type = serializers.SerializerMethodField()
