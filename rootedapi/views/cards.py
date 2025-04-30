@@ -6,7 +6,7 @@ from rest_framework import serializers
 from rest_framework import status
 from rest_framework.decorators import action
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
-from rootedapi.models import Element, CardType, CardKeyword, Card
+from rootedapi.models import Element, CardType, Keyword, Card
 from .decks import DeckSerializer
 
 #Elements are descriptive tools added to the Card
@@ -31,6 +31,17 @@ class CardTypeSerializer(serializers.ModelSerializer):
             'name',
             'label',
             'description'
+        )
+
+#Keywords are a descriptive tool added to the card only
+class KeywordSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Keyword
+        fields = (
+            'id',
+            'name',
+            'label'
         )
 
 class CardSerializer(serializers.ModelSerializer):
@@ -69,6 +80,8 @@ class CardSerializer(serializers.ModelSerializer):
 
         return CardTypeSerializer(type_of_card, context=self.context).data
     
+    def get_keywords(self,obj):
+        return KeywordSerializer(obj.keywords.all(), many=True).data
     
 class Cards(ViewSet):
 
@@ -78,3 +91,12 @@ class Cards(ViewSet):
 
         return Response(serializer.data)
     
+    def retrieve(self,request, pk=None):
+        try:
+            card = Card.objects.get(pk=pk)
+            serializer = CardSerializer(card, many=False, context={"request": request})
+
+            return Response(serializer.data)
+        except Card.DoesNotExist as ex:
+
+            return Response({"message": ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
