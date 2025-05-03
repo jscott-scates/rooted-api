@@ -6,7 +6,6 @@ from rest_framework import status
 from rest_framework.decorators import action
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
 from rootedapi.models import Element, CardType, Keyword, Card
-from .decks import DeckSerializer
 
 #Elements are descriptive tools added to the Card
 class ElementSerializer(serializers.ModelSerializer):
@@ -46,7 +45,6 @@ class KeywordSerializer(serializers.ModelSerializer):
 class CardSerializer(serializers.HyperlinkedModelSerializer):
     #Figure out how to add URL
     element = serializers.SerializerMethodField()
-    deck = serializers.SerializerMethodField()
     card_type = serializers.SerializerMethodField()
     keywords = serializers.SerializerMethodField()
 
@@ -59,7 +57,6 @@ class CardSerializer(serializers.HyperlinkedModelSerializer):
             'orientation_enabled',
             'image_path',
             'element',
-            'deck',
             "card_type",
             "keywords"
         )
@@ -68,11 +65,6 @@ class CardSerializer(serializers.HyperlinkedModelSerializer):
         element = obj.element
 
         return ElementSerializer(element, context=self.context).data
-
-    def get_deck(self, obj):
-        deck = obj.deck
-
-        return DeckSerializer(deck, context=self.context).data
     
     def get_card_type(self, obj):
         type_of_card = obj.card_type

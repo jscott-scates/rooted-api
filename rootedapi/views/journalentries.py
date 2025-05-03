@@ -1,3 +1,4 @@
+import random
 from django.http import HttpResponseServerError, HttpResponseForbidden
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
@@ -5,14 +6,16 @@ from rest_framework import serializers
 from rest_framework import status
 from rest_framework.decorators import action
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
-from rootedapi.models import JournalEntry, Sage, SpreadPosition, EntryCard
+from rootedapi.models import JournalEntry, Sage, SpreadPosition, EntryCard, Card
 from .sages import SageSerializer
 from .spreads import SpreadDetailsSerializer
+from .entrycards import EntryCardSerializer
 
 class JournalEntrySerializer(serializers.ModelSerializer):
 
-    sage = SageSerializer(many=False)
-    spread = serializers.SerializerMethodField   
+    sage = SageSerializer(many=False, read_only=True)
+    spread = serializers.SerializerMethodField(read_only=True)
+    entry_cards = serializers.SerializerMethodField(read_only=True)
 
     class Meta:
         model = JournalEntry
@@ -25,14 +28,20 @@ class JournalEntrySerializer(serializers.ModelSerializer):
             'created_on',
             'mood',
             'lunar_phase',
-            'spread'
+            'spread',
+            'entry_cards'
         )
         depth = 1
 
     def get_spread(self, obj):
         spread = obj.spread
 
-        return SpreadDetailsSerializer(spread, context = self.context)
+        return SpreadDetailsSerializer(spread, context = self.context).data
+    
+    def get_entry_cards(self,obj):
+        entry_card = obj.entry_cards.all()
+
+        return EntryCardSerializer(entry_card, many=True, context=self.context).data
 
 class JournalEntries(ViewSet):
 
@@ -77,6 +86,12 @@ class JournalEntries(ViewSet):
             #Get the current sage
             sage = Sage.objects.get(user=request.auth.user)
 
+            #Get list of all cards that belong to sage's preferred deck
+            deck_cards = list(Card.objects.filter(deck=sage.deck))
+
+            #Shuffle the Cards to ensure they are in a random order (non-destructive)
+            random.shuffle(deck_cards)
+
             #Get the spread id from the request
             spread_id = request.data.get("spread")
             if not spread_id:
@@ -95,13 +110,22 @@ class JournalEntries(ViewSet):
             #Fetch all positions tied to the selected spread
             spread_positions = SpreadPosition.objects.filter(spread_id = spread_id)
 
-            #Create empty entry cards for each spread position
-            for position in spread_positions:
-                EntryCard.objects.create(
-                    journalEntry = new_journal,
-                    spread_position = position,
-                    card = None #Placeholder value for the cards that will be drawn in the next user action, instantiating as part of journal creation.
-                )
+            #Create entry cards for each spread position and assign a unique card to each position
+            #Using the i allows us to index the cards in teh deck and ensure that we do not draw the same card in a single spread
+            for i, position in enumerate(spread_positions):
+                if i < len(deck_cards):
+                    EntryCard.objects.create(
+                        journalEntry = new_journal,
+                        spread_position = position,
+                        card = deck_cards[i]
+                    )
+                else:
+                    # Handle edge case where not enough cards exist
+                    EntryCard.objects.create(
+                        journalEntry=new_journal,
+                        spread_position=position,
+                        card=None
+                    )
             
             #Return the new journal entry
             serializer = JournalEntrySerializer(new_journal, context={"request":request})
@@ -122,11 +146,11 @@ class JournalEntries(ViewSet):
             if entry.sage != current_sage:
                 return HttpResponseForbidden("You do not have permission to update this journal entry.")
             
-            entry.initial_seed = request.data["initial_seed"]
-            entry.title = request.data["title"]
-            entry.entry_text = request.data["entry_text"]
-            entry.mood = request.data["mood"]
-            entry.lunar_phase = request.data["lunar_phase"]
+            entry.initial_seed = request.data.get("initial_seed", entry.initial_seed)
+            entry.title = request.data.get("title", entry.title)
+            entry.entry_text = request.data.get("entry_text",entry.entry_text)
+            entry.mood = request.data.get("mood", entry.mood)
+            entry.lunar_phase = request.data.get("lunar_phase", entry.lunar_phase)
             entry.created_on = entry.created_on
             entry.sage = entry.sage
             entry.spread = entry.spread

@@ -9,3 +9,4 @@ from .cards import Cards
 from .journalentries import JournalEntries
 from .entrycards import EntryCards
 from .profile import Profile
+from .textchoices import get_journal_choices

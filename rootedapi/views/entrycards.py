@@ -10,9 +10,8 @@ from .cards import CardSerializer
 from .spreads import SpreadPositionSerializer
 
 class EntryCardSerializer(serializers.ModelSerializer):
-    #spreadposition
-    card = serializers.SerializerMethodField
-    spread_position = serializers.SerializerMethodField
+    card = serializers.SerializerMethodField()
+    spread_position = serializers.SerializerMethodField()
 
     class Meta:
         model = EntryCard
@@ -26,12 +25,12 @@ class EntryCardSerializer(serializers.ModelSerializer):
     def get_card(self, obj):
         card = obj.card
 
-        return CardSerializer(card, context = self.context)
+        return CardSerializer(card, context = self.context).data
     
     def get_spread_position(self, obj):
         position = obj.spread_position
 
-        return SpreadPositionSerializer(position, context = self.context)
+        return SpreadPositionSerializer(position, context = self.context).data
     
 class EntryCards(ViewSet):
     permission_classes = (IsAuthenticatedOrReadOnly,)
