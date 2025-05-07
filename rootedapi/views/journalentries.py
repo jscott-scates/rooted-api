@@ -16,6 +16,8 @@ class JournalEntrySerializer(serializers.ModelSerializer):
     sage = SageSerializer(many=False, read_only=True)
     spread = serializers.SerializerMethodField(read_only=True)
     entry_cards = serializers.SerializerMethodField(read_only=True)
+    mood = serializers.SerializerMethodField()
+    lunar_phase = serializers.SerializerMethodField()
 
     class Meta:
         model = JournalEntry
@@ -43,6 +45,12 @@ class JournalEntrySerializer(serializers.ModelSerializer):
 
         return EntryCardSerializer(entry_card, many=True, context=self.context).data
 
+    def get_mood(self, obj):
+        return obj.get_mood_display()
+
+    def get_lunar_phase(self, obj):
+        return obj.get_lunar_phase_display()
+    
 class JournalEntries(ViewSet):
 
     permission_classes = (IsAuthenticatedOrReadOnly,)
