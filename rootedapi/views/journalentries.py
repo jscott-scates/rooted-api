@@ -58,6 +58,22 @@ class JournalEntries(ViewSet):
     def list(self, request):
         current_sage = Sage.objects.get(user=request.auth.user)
         entries = JournalEntry.objects.filter(sage = current_sage)
+
+        #Support filtering by choices, spread, name, and dates
+        spread_param = self.request.query_params.get("spread",None)
+        mood_param = self.request.query_params.get("mood")
+        lunarPhase_param = self.request.query_params.get("lunarPhase",None)
+
+        if spread_param is not None:
+            entries = entries.filter(spread__id=spread_param)
+
+        if mood_param:
+            entries = entries.filter(mood=mood_param)
+        
+        if lunarPhase_param:
+            entries = entries.filter(lunar_phase = lunarPhase_param)
+        
+
         serializer = JournalEntrySerializer(entries, many=True, context={"request": request})
 
         return Response(serializer.data)
