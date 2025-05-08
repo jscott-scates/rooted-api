@@ -63,6 +63,7 @@ class JournalEntries(ViewSet):
         spread_param = self.request.query_params.get("spread",None)
         mood_param = self.request.query_params.get("mood")
         lunarPhase_param = self.request.query_params.get("lunarPhase",None)
+        name = self.request.query_params.get("name", None)
 
         if spread_param is not None:
             entries = entries.filter(spread__id=spread_param)
@@ -72,6 +73,9 @@ class JournalEntries(ViewSet):
         
         if lunarPhase_param:
             entries = entries.filter(lunar_phase = lunarPhase_param)
+        
+        if name:
+            entries = entries.filter(title__contains = name)
         
 
         serializer = JournalEntrySerializer(entries, many=True, context={"request": request})
@@ -86,9 +90,9 @@ class JournalEntries(ViewSet):
 
             return Response(serializer.data)
         
-        except Exception as ex:
+        except JournalEntry.DoesNotExist:
             
-            return HttpResponseServerError(ex)
+            return Response({},status=status.HTTP_404_NOT_FOUND)
 
     def destroy(self, request, pk=None):
         try:
