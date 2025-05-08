@@ -13,7 +13,10 @@ router.register(r"sages",Sages, "sage")
 router.register(r"spreads", Spreads,"spread")
 router.register(r"decks", Decks, "deck")
 router.register(r"decktypes", DeckTypes, "decktype")
-router.register(r"elements", Elements, "element")
+router.register(r"cards", Cards, "card")
+router.register(r"journal-entries",JournalEntries, "journal-entry")
+router.register(r"entry-cards", EntryCards, "entry-card")
+router.register(r"profile", Profile, "profile")
 
 urlpatterns = [
     path("", include(router.urls)),
@@ -21,5 +24,6 @@ urlpatterns = [
     path("login", login_user),
     path("api-token-auth", obtain_auth_token),
     path("api-auth", include("rest_framework.urls", namespace="rest_framework")),
+    path('journal-choices/', get_journal_choices),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

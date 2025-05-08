@@ -35,7 +35,7 @@ class LunarPhase(models.TextChoices):
 class JournalEntry(models.Model):
     sage = models.ForeignKey(Sage, on_delete=models.CASCADE, related_name="journal")
     initial_seed = models.CharField(max_length=250, null=True, blank=True)
-    title = models.CharField(max_length=100)
+    title = models.CharField(max_length=100, blank=True, null=True)
     entry_text = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
     mood = models.CharField(
